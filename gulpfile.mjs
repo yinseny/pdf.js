@@ -34,6 +34,7 @@ import postcss from "gulp-postcss";
 import postcssDarkThemeClass from "postcss-dark-theme-class";
 import postcssDirPseudoClass from "postcss-dir-pseudo-class";
 import postcssDiscardComments from "postcss-discard-comments";
+import postcssMultiValueDisplay from "postcss-multi-value-display";
 import postcssNesting from "postcss-nesting";
 import { preprocess } from "./external/builder/builder.mjs";
 import relative from "metalsmith-html-relative";
@@ -1097,6 +1098,7 @@ function buildGeneric(defines, dir) {
           discardCommentsCSS(),
           postcssNesting(),
           postcssDarkThemeClass(),
+          postcssMultiValueDisplay(),
           autoprefixer(AUTOPREFIXER_CONFIG),
         ])
       )
